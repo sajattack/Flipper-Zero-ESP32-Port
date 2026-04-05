@@ -21,6 +21,7 @@ void furi_hal_init_early(void) {
 }
 
 void furi_hal_deinit_early(void) {
+    furi_hal_speaker_deinit();
 }
 
 void furi_hal_init(void) {
@@ -40,5 +41,6 @@ void furi_hal_init(void) {
     furi_hal_light_init();
     furi_hal_display_init();
     furi_hal_nfc_init();
+    furi_hal_speaker_init();
     ESP_LOGI(TAG, "Init complete");
 }
